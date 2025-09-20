@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compound Interest Layout</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="/css/colourCode.css">
+</head>
+<body>
+
+<div class="container">
+  <!-- Arrow Column -->
+  <div class="arrow-col">
+    <div class="arrow arrow1">➜</div>
+    <div class="arrow arrow2">➜</div>
+    <div class="arrow arrow3">➜</div>
+    <div class="arrow arrow4">➜</div>
+    <div class="arrow arrow5">➜</div>
+  </div>
+
+  <!-- Left Column -->
+  <div class="left-col">
+    <div class="step">
+      <span class="numbox" th:text="${solution['Principal']}"></span>
+      <span>=</span>
+      <div class="bracket">
+        <span class="thirdBracket">[</span> 1 +
+        <span class="fraction">
+          <span class="top varbox R" th:text="${solution['Rate']}"></span>
+          <span class="bottom">100</span>
+        </span> 
+        <span class="thirdBracket">]</span> <sup th:text="${solution['Time']}"></sup>
+      </div>
+      <span>=</span>
+      <span class="numbox" th:text="${solution['Amount']}"></span>
+    </div>
+
+    <div class="left-inner">
+      <div class="step">
+        <div class="bracket">
+          <span class="thirdBracket">[</span> 1 +
+          <span class="fraction">
+            <span class="top varbox R" th:text="${solution['Rate']}"></span>
+            <span class="bottom">100</span>
+          </span> 
+          <span class="thirdBracket">]</span><sup th:text="${solution['Time']}"></sup>
+        </div>
+        <span>=</span>
+        <span class="fraction">
+          <span class="top" th:text="${solution['Step1Top']}"></span>
+          <div class="line-by"></div>
+          <span class="bottom" th:text="${solution['Step1Bottom']}"></span>
+        </span>
+      </div>
+
+      <div class="step">
+        <div class="bracket">
+          <span class="thirdBracket">[</span> 1 +
+          <span class="fraction">
+            <span class="top varbox R" th:text="${solution['Rate']}"></span>
+            <span class="bottom">100</span>
+          </span>  
+          <span class="thirdBracket">]</span><sup th:text="${solution['Time']}"></sup>
+        </div>
+        <span>=</span>
+        <span class="fraction">
+          <span class="top" th:text="${solution['Step2Top']}"></span>
+          <div class="line-by"></div>
+          <span class="bottom" th:text="${solution['Step2Bottom']}"></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="varbox R">r</span>
+      <span>=</span>
+      <span class="fraction">
+        <span class="top" th:text="${solution['Step1Top']}"></span>
+        <div class="line-by"></div>
+        <span class="bottom" th:text="${solution['Step1Bottom']}"></span>
+      </span>
+      <span>× 100</span>
+      <span class="varbox R">r</span>
+      <span>=</span>
+      <span class="numbox" th:text="${solution['Rate']}"></span>
+    </div>
+  </div>
+
+  <!-- Right Column -->
+  <div class="right-col">
+    <div class="right-top-box">
+      <img src="/images/interesticon.png" alt="icon">
+      
+      <div class="vertical-content">
+        <span>Interest Compounded Annually</span>
+
+        <div class="blackbox-container">
+          <div class="long-arrow"></div>
+          <div class="blackbox blackbox-top">
+            <span class="numbox" th:text="${solution['Principal']}"></span>
+            <span class="numbox" th:text="${solution['Time']}"></span>
+            <span class="numbox" th:text="${solution['Amount']}"></span>
+          </div>
+        </div>
+
+        <span class="years-text">years</span>
+      </div>
+    </div>
+
+    <div class="blackbox blackbox-desc">
+      Amount of the same sum in 2 years at<br>
+      the same rate of compound interest
+    </div>
+
+    <div class="right-inner">
+      <div class="calc-line">
+        <span>=</span>
+        <span class="numbox" th:text="${solution['Principal']}"></span>
+        <span class="bracket">
+          <span class="thirdBracket">[</span>1 +
+          <span class="fraction">
+            <span class="top">20</span>
+            <span class="bottom">100</span>
+          </span>
+          <span class="thirdBracket">]</span> <sup>2</sup>
+        </span>
+      </div>
+
+      <div class="calc-line">
+        <span>=</span>
+        <span class="numbox" th:text="${solution['Principal']}"></span>
+        <span>×</span>
+        <span class="fraction">
+          <span class="top" th:text="${solution['Step1Top']}"></span>
+          <span class="bottom" th:text="${solution['Step1Bottom']}"></span>
+        </span>
+        <span>×</span>
+        <span class="fraction">
+          <span class="top" th:text="${solution['Step1Top']}"></span>
+          <span class="bottom" th:text="${solution['Step1Bottom']}"></span>
+        </span>
+      </div>
+
+      <div class="calc-line">
+        <span>=</span>
+        <span class="highlight" th:text="${solution['Amount']}"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

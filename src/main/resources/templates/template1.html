@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sec C + Cot A Solver</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="/css/colourCode.css">
+</head>
+<body>
+
+<div class="container">
+  <!-- Left Column: Explanation and Calculation -->
+  <div>
+    <div class="explanation-box-1">
+      <!-- Step 1 -->
+      <div class="math-box">
+        <span class="point-a">A</span>
+        <span class="point-c">C</span>
+        -
+        <span class="point-b">B</span>
+        <span class="point-c">C</span>
+        = <span th:text="${solution['Step1Diff']}"></span>
+      </div>
+
+      <!-- Step 2: Pythagorean Check -->
+      <div class="math-box">
+        <div>
+          <span th:text="${solution['Step2Equation']}"></span>
+        </div>
+        <div>
+          <img src="/images/arrow.png" alt="arrow" class="arrow-img">
+        </div>
+        <div th:text="${solution['Step2Result']}"></div>
+      </div>
+
+      <!-- Fraction Calculation -->
+      <div class="fraction-container">
+        <span>(Sec <span class="sec-c">C</span> + Cot <span class="cot-a">A</span>) =</span>
+        <div class="fraction">
+          <div th:text="${solution['SecCTop']}"></div>
+          <div class="line-by"></div>
+          <div th:text="${solution['SecCBottom']}"></div>
+        </div>
+        <span>&nbsp;+&nbsp;</span>
+        <div class="fraction">
+          <div th:text="${solution['CotATop']}"></div>
+          <div class="line-by"></div>
+          <div th:text="${solution['CotABottom']}"></div>
+        </div>
+      </div>
+
+      <!-- Final Answer -->
+      <div class="fraction-container answer-line">
+        <span>=</span>
+        <div class="answer-box" th:text="${solution['Answer']}"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Column: Triangle Diagram -->
+  <div style="display: flex; flex-direction: column;">
+    <div class="triangle-diagram">
+      <div class="side ab"></div>
+      <div class="side bc"></div>
+
+      <svg class="side-ac-line" width="240" height="140">
+        <!-- Triangle fill -->
+        <polygon points="0,140 0,0 240,140" fill="rgba(173, 216, 230, 0.2)" />
+        <!-- Hypotenuse line (AC) -->
+        <line x1="0" y1="0" x2="240" y2="140" stroke="black" stroke-width="4" />
+      </svg>
+
+      <div class="label point-a">A</div>
+      <div class="label point-b">B</div>
+      <div class="label point-c">C</div>
+      <div class="dimension ab-label" th:text="${solution['AB']}"></div>
+      <div class="dimension bc-label" th:text="${solution['BC']}"></div>
+      <div class="dimension ac-label" th:text="${solution['AC']}"></div>
+    </div>
+
+    <!-- Formulas -->
+    <div class="formulaBoxUltimate">
+      <div class="formula-table formula-top">
+        <div class="fraction-container">
+          Sec <span class="sec-c">C</span> =
+          <div class="fraction">
+            <div th:text="${solution['SecCFormulaTop']}"></div>
+            <div class="linel-by"></div>
+            <div th:text="${solution['SecCFormulaBottom']}"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="formula-table formula-bottom">
+        <div class="fraction-container">
+          Cot <span class="cot-a">A</span> =
+          <div class="fraction">
+            <div th:text="${solution['CotAFormulaTop']}"></div>
+            <div class="linel-by"></div>
+            <div th:text="${solution['CotAFormulaBottom']}"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

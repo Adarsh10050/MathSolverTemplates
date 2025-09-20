@@ -1,0 +1,288 @@
+/* ---------------- TEMPLATE 1 CSS (Compound Interest) ---------------- */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Calibri, sans-serif;
+  font-size: 27px;
+  font-weight: bold;
+  background: #fff;
+}
+
+.container {
+  max-width: 1120px;
+  margin: auto;
+  display: flex;
+  gap: 0px;
+  box-shadow: 0 4px 8px rgba(-10,0,0,4);
+  border-radius: 12px;
+  padding: 50px 86px;
+  position: relative;
+}
+
+.arrow-col {
+  width: 40px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.arrow {
+  position: absolute;
+  left: 0;
+  font-size: 30px;
+  color: #888;
+}
+
+.arrow1 { top: 50px; }
+.arrow2 { top: 216px; }
+.arrow3 { top: 369PX; }
+.arrow4 { top: 525px; }
+.arrow5 { top: 647px; }
+
+.left-col, .right-col {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.right-col {
+  padding-left: 54px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bracket {
+  background: #ffeaea;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+.fraction .top {
+  padding: 3px 17px;
+}
+
+.fraction .bottom {
+  border-top: 2px solid #000;
+  padding: 0 6px;
+}
+
+.varbox {
+  padding: 3px 17px;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 0 4px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.numbox {
+  background: #ffffff;
+  padding: 2px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 0 4px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.highlight {
+  background: #1bad83;
+  color: white;
+  padding: 2px 12px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  font-size: 30px;
+}
+
+.dashed-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  align-items: center;
+}
+
+.dashed-line {
+  width: 0;
+  border-left: 3px dashed #000;
+  height: 70px;
+  position: relative;
+  top: 5px;
+}
+
+.blackbox-inline {
+  background: #222;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 27px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  gap: 10px;
+}
+
+.blackbox {
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  text-align: center;
+  display: flex;
+  gap: 31px;
+}
+
+.blackbox-container {
+  position: relative;
+}
+
+.long-arrow {
+  position: absolute;
+  top: -12px;
+  left: 177px;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 94px;
+  background: white;
+  z-index: 1;
+  rotate: 270deg;
+}
+
+.long-arrow::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid white;
+}
+
+.right-top-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 3px dashed #6d6d6d;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.right-top-box img {
+  width: 90px;
+  height: 121px;
+}
+
+.vertical-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.calc-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.thirdBracket {
+  font-size: 100px;
+  font-weight: 100;
+}
+
+.num0 { background: linear-gradient(to bottom, #F8BACA, #A1C1E0);}
+.num1 { background: linear-gradient(to bottom, #EBE0C7, #97B5BB);}
+.num2 { background: linear-gradient(to bottom, #F3DDFF, #F9FAD7);}
+.num3 { background: linear-gradient(to bottom, #FFBFBD, #C0EEFC);}
+.num4 { background: linear-gradient(to bottom, #F5DEE7, #EEB8CC);}
+.num5 { background: linear-gradient(to bottom, #FFB686, #F3DDFF);}
+.num6 { background: linear-gradient(to bottom, #CA8454, #FBF6F3);}
+.num7 { background: linear-gradient(to bottom, #3399FE, #F0F7FF);}
+.num8 { background: linear-gradient(to bottom, #B8DDFF, #ffffff);}
+.num9 { background: linear-gradient(to bottom, #F1FAFB, #8DD6D8);} 
+
+
+/* ---------------- TEMPLATE 2 CSS (Trigonometry Sec C + Cot A) ---------------- */
+body {
+  background: #f6f8fb; /* Override template1 background */
+  font-size: 27px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.triangle-diagram {
+  position: relative;
+  width: 240px;
+  height: 140px;
+  margin: 40px auto;
+}
+
+.side.ab, .side.bc {
+  position: absolute;
+  background: black;
+}
+
+.side.ab { left:0; bottom:0; width:4px; height:140px;}
+.side.bc { left:0; bottom:0; width:240px; height:4px;}
+
+.side-ac-line { position: absolute; left:0; bottom:0;}
+
+.label {
+  position: absolute;
+  font-weight: bold;
+  background: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+  box-shadow: 3px 3px 4px rgba(181,181,181,1.5);
+}
+
+.point-a { top:-20px; left:-15px; background-color: #ED8392; }
+.point-b { bottom:-25px; left:-15px; background-color: #7BC3EC; }
+.point-c { bottom:-25px; right:-15px; background-color: #B7F3F0; }
+
+.dimension {
+  position: absolute;
+  background: white;
+  padding: 2px 6px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 4px rgba(181,181,181,1.5);
+}
+
+.ab-label { left:-40px; top:45px; background: linear-gradient(to top,#F5FAFF,#3399FF);}
+.bc-label { bottom:-35px; left:90px; background: linear-gradient(to top,#F9FAD6,#F3DDFF);}
+.ac-label { top:40px; right:90px; background: linear-gradient(to top,#F3DDFF,#FEB78A); }
+
+.formula-table { background:#222; color:white; border-radius:10px; padding:10px 20px; display:flex; flex-direction:column;}
+
+.explanation-box-1 { border-radius:12px; padding:16px; margin-bottom:20px; display:flex; flex-direction:column; width:fit-content; gap:20px; }
+
+.math-box { border-radius:12px; padding:10px 20px; margin:10px 0; font-weight:bold; display:inline-block; text-align:center; }
+
+.fraction { display:flex; flex-direction:column; align-items:center; }
+
+.line-by { width:40px; height:3px; background:gray; }
+.linel-by { width:140px; height:3px; background:white; }
+
+.fraction-container { display:flex; align-items:center; justify-content:left; gap:6px; }
+
+.answer-box { font-size:30px; background-color:#1BAD83; color:white; padding:6px 20px; border-radius:10px; font-weight:bold; margin-left:10px; box-shadow:3px 3px 4px rgba(181,181,181,1.5); }
+
+.formulaBoxUltimate { width:298px; display:flex; flex-direction:column; gap:2px; margin-top:10px; }
+
+.arrow-img { width:50px; }
