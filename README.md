@@ -23,7 +23,9 @@ The application uses **Thymeleaf templates** for dynamic rendering of calculatio
      
 ## Screenshots
 <img width="1773" height="870" alt="Screenshot 2025-09-20 234930" src="https://github.com/user-attachments/assets/b9f003ab-0513-49a6-9916-2e5dc5d9eb24" />
-
+<img width="1760" height="923" alt="Screenshot 2025-09-20 234946" src="https://github.com/user-attachments/assets/ffdabc7a-4d66-44e4-bf72-adcb969c95db" />
+<img width="1771" height="878" alt="Screenshot 2025-09-20 235022" src="https://github.com/user-attachments/assets/0dcbf430-37ab-46f2-adcd-aa4215648d88" />
+<img width="1763" height="940" alt="Screenshot 2025-09-20 235036" src="https://github.com/user-attachments/assets/f6572ff6-8431-4d4e-bc31-a5d72f5c686a" />
 
 ## Technologies Used
 - Java 21  
